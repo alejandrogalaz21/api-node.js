@@ -1,0 +1,26 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "plugins": [],
+  "extends": [],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "no-eval": "error",
+    "import/first": "off",
+    "import/no-named-as-default": "off",
+    "import/no-unresolved": "off",
+    "no-unused-vars": "warn"
+  },
+  "globals": {
+    "fixture": "writable"
+  }
+}
