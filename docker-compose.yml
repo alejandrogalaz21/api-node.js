@@ -1,0 +1,25 @@
+version: '3.7'
+
+networks:
+  default:
+    external:
+      name: homeserver_network
+  internal:
+    internal: true
+
+services:
+  app:
+    container_name: api_node
+    hostname: survey_host
+    build:
+      context: .
+    ports:
+      - 5000
+    environment:
+      PORT: 5000
+      NODE_ENV: production
+      TZ: America/Mexico_City
+    restart: unless-stopped
+    networks:
+      - default
+      - internal

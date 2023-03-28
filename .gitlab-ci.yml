@@ -1,0 +1,16 @@
+image: docker:latest
+services:
+  - docker:dind
+
+stages:
+  - deploy
+
+deploy-survey:
+  stage: deploy
+  script:
+    - docker-compose -p api-node up  -d  --build --force-recreate --remove-orphans
+  when: always
+  tags:
+    - azuka
+  only:
+    - main
