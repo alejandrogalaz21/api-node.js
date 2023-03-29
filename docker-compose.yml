@@ -10,7 +10,7 @@ networks:
 services:
   app:
     container_name: api_node
-    hostname: survey_host
+    hostname: api_host
     build:
       context: .
     ports:

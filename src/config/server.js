@@ -37,7 +37,7 @@ class Server {
   }
 
   routes() {
-    this.app.use('/api', [router, userRoutes])
+    this.app.use('/api/v1', [router, userRoutes])
     this.app.get('/*', (req, res) => {
       res.sendFile(this.publicDir + '/link.html')
     })
