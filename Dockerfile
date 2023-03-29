@@ -13,9 +13,9 @@ RUN yarn
 
 # Build api
 # Transpile the source code using Babel
-RUN yarn build
+RUN yarn run build
 
 # Remove client source code and create package directory
 # RUN rm -rf /opt/app/spa
 # Run app
-CMD [ "node", "dist/index.js" ]
+CMD [ "yarn", "start:build" ]
