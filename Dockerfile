@@ -13,7 +13,7 @@ RUN yarn
 
 # Build api
 # Transpile the source code using Babel
-RUN npm run build
+RUN yarn build
 
 # Remove client source code and create package directory
 # RUN rm -rf /opt/app/spa

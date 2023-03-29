@@ -5,7 +5,7 @@ services:
 stages:
   - deploy
 
-deploy-survey:
+deploy:
   stage: deploy
   script:
     - docker-compose -p api-node up  -d  --build --force-recreate --remove-orphans
