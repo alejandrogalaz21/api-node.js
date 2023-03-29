@@ -4,18 +4,11 @@ FROM node:14-alpine
 WORKDIR /opt/app/api
 
 # Copy package.json and yarn.lock
-COPY ./package*.json ./
-COPY ./yarn.lock ./
-COPY ./.babelrc ./
-
+COPY . .
 # Install production dependencies
 RUN yarn 
 
-COPY ./public .
-COPY ./src .
-
 # Build api
-# Transpile the source code using Babel
 RUN yarn run build
 
 # Remove client source code and create package directory
