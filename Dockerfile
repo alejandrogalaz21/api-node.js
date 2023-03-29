@@ -11,6 +11,9 @@ COPY ./.babelrc ./
 # Install production dependencies
 RUN yarn 
 
+COPY ./public .
+COPY ./src .
+
 # Build api
 # Transpile the source code using Babel
 RUN yarn run build
