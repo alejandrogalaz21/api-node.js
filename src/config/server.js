@@ -34,12 +34,36 @@ class Server {
       console.log('Socket middleware ', socket.id)
       next()
     })
+    // error handler middleware
   }
 
   routes() {
     this.app.use('/api/v1', [router, userRoutes])
-    this.app.get('/*', (req, res) => {
-      res.sendFile(this.publicDir + '/link.html')
+    this.app.get('/wifi', (req, res) => {
+      res.sendFile(this.publicDir + '/qr.html')
+    })
+    this.app.get('/', (req, res) => {
+      res.sendFile(this.publicDir + '/index.html')
+    })
+    // not found error handler middleware
+    this.app.use((req, res, next) => {
+      const error = new Error('Not found')
+      error.status = 404
+      next(error)
+    })
+    // error handler middleware
+    this.app.use((error, req, res, next) => {
+      console.log(error)
+      if (error.status === 404) {
+        return res.sendFile(this.publicDir + '/404.html')
+      }
+
+      res.status(error.status || 500).send({
+        error: {
+          status: error.status || 500,
+          message: error.message || 'Internal Server Error'
+        }
+      })
     })
   }
 
