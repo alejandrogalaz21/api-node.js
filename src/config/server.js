@@ -39,6 +39,9 @@ class Server {
 
   routes() {
     this.app.use('/api/v1', [router, userRoutes])
+    this.app.get('/links', (req, res) => {
+      res.sendFile(this.publicDir + '/page')
+    })
     this.app.get('/wifi', (req, res) => {
       res.sendFile(this.publicDir + '/qr.html')
     })
