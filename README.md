@@ -1,4 +1,4 @@
-<h3 align="center">Mongoose ES6 Example</h3> 
+<h3 align="center">Azure Cognitive Services API</h3> 
 <p align="center">
   <a href="https://github.com/alejandrogalaz21/js-babel-node">
     <img src="https://media.giphy.com/media/13HBDT4QSTpveU/giphy.gif" alt="cat developer" width=350 height=250>
@@ -31,7 +31,6 @@
   </p>
 </p>
 
-
 ## Technologies
 
 ---
@@ -49,7 +48,6 @@ A list of technologies used within the project:
 Requiriments:
 
 [![node.js](https://img.shields.io/badge/node.js-v14.15.4-<COLOR>)](https://nodejs.org/es/)
-
 
 ## Installation
 
@@ -87,18 +85,16 @@ Create your Visual Studio Code config file .vscode/launch.json
 }
 
 ```
+
 # New Debug config :
+
 https://thecodereaper.com/2020/05/30/how-to-write-and-debug-es6-code-with-node-js-and-visual-studio-code/
 
 # Refs :
 
-- https://www.toptal.com/developers/gitignore
-- https://www.markdownguide.org/basic-syntax/
-- https://gist.github.com/rxaviers/7360908
-- https://github.com/Naereen/badges/blob/master/README.md
-- https://shields.io/
-- https://github.com/alexandresanlim/Badges4-README.md-Profile
-- https://scoutapm.com/blog/nodejs-architecture-and-12-best-practices-for-nodejs-development#singlethread
+- [Language Studio](https://language.cognitive.azure.com/tryout/sentiment)
+- [Github Azure SDK JS](https://github.com/Azure/azure-sdk-for-js)
+- [Microsoft Learn Documentation](https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/language-detection/overview)
 
 # Bugs and feature requests
 
